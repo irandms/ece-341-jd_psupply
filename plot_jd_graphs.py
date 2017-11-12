@@ -55,7 +55,7 @@ def generate_graph(plot_title, file_name):
     Shows the figure.
     """
     plt.title(plot_title)
-    plt.legend(loc='upper left')
+    plt.legend()
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.gca().set_ylim(ymin=0)
@@ -63,5 +63,22 @@ def generate_graph(plot_title, file_name):
     plt.show()
 
 if __name__ == "__main__":
-    generate_graph('3.3V Voltage Ripple vs. Output Current', '3v3ripple.ods')
-    generate_graph('5V Voltage Ripple vs. Output Current', '5vripple.ods')
+    generate_graph('3.3V Voltage Ripple vs. Output Current',
+                   '3v3ripple.ods')
+    generate_graph('5V Voltage Ripple vs. Output Current',
+                   '5vripple.ods')
+
+    generate_graph('3.3V Nominal Input/Output Current vs. Input Voltage',
+                   '3v3nominal.ods')
+    generate_graph('5V Nominal Input/Output Current vs. Input Voltage',
+                   '5vnominal.ods')
+
+    generate_graph('3.3V Peak Input/Output Current vs. Input Voltage',
+                   '3v3peak.ods')
+    generate_graph('5V Peak Input/Output Current vs. Input Voltage',
+                   '5vpeak.ods')
+
+    generate_graph('3.3V Nominal and Peak Current vs. Input Voltage',
+                   '3v3nomVSpeak.ods')
+    generate_graph('5V Nominal and Peak Current vs. Input Voltage',
+                   '5vnomVSpeak.ods')
